@@ -34,7 +34,6 @@ header {
 
 nav {
   display: flex;
-  justify-self: stretch;
 }
 
 a.menu {
@@ -45,6 +44,10 @@ a.menu {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #092b40;
+}
+
+.menu:hover {
+  opacity: 0.5;
 }
 
 #bars {
@@ -191,6 +194,13 @@ a.menu {
   background-color: #f6ede1;
 }
 
+.btn-readmore:hover {
+  width: 150px;
+  transition: all 100ms ease-in-out;
+  background-color: #ff6262;
+  color: #fff;
+}
+
 /* newsletter Section2 css */
 .conatiner-newsletter-section {
   display: flex;
@@ -238,6 +248,7 @@ a.menu {
   border: none;
   border-radius: 10px;
 }
+
 .newsletter-subs-btn {
   padding: 10px;
   font-size: 0.875rem;
@@ -245,6 +256,11 @@ a.menu {
   color: #fff;
   border: none;
   border-radius: 10px;
+}
+
+.newsletter-subs-btn:hover {
+  background-color: #011526;
+  transform: scale(1.02);
 }
 
 .newsletter-policy {
@@ -370,9 +386,14 @@ footer {
   border-radius: 10px;
 }
 
-.social-list{
-    padding: 24px 24px;
-  }
+.ft-newsletter-subs-btn:hover {
+  background-color: #011526;
+  transform: scale(1.02);
+}
+
+.social-list {
+  padding: 24px 24px;
+}
 
 .social-list a {
   text-decoration: none;
