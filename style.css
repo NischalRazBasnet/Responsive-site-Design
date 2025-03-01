@@ -19,6 +19,7 @@ html.sr .load-hidden {
 /* HEADER CSS */
 header {
   display: flex;
+  max-width: 100%;
   flex-wrap: wrap;
   overflow: hidden;
   justify-content: space-between;
@@ -91,9 +92,10 @@ a.menu {
 /* Hero section1 css  */
 .container-hero-blog-section {
   padding: 16px;
+  max-width: 100%;
   display: grid;
   gap: 16px;
-  height: 90vh;
+  height: fit-content;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, minmax(380px, 1fr));
   grid-template-areas: 'area1 area1 area2' 'area3 area3 area2';
@@ -156,7 +158,7 @@ a.menu {
 }
 
 .blog-post {
-  height: 80%;
+  height: 85%;
   padding: 24px 16px 10px 0px;
   display: flex;
   justify-content: flex-end;
@@ -208,7 +210,8 @@ a.menu {
 /* newsletter Section2 css */
 .conatiner-newsletter-section {
   display: flex;
-  height: 50vh;
+  height: fit-content;
+  max-width: 100%;
   padding: 0px 24px;
   justify-content: center;
 }
@@ -274,7 +277,8 @@ a.menu {
 /* Article section3 css */
 .conatiner-article-section,
 .conatiner-article2-section {
-  padding: 0px 16px 16px 16px;
+  padding: 10px 16px 16px 16px;
+  max-width: 100%;
   display: grid;
   gap: 16px;
   grid-template-columns: repeat(4, 1fr);
@@ -412,10 +416,136 @@ footer {
   color: #092b40;
 }
 
-/* media queries for tablet view*/
+/* media queries for Small-laptop view*/
+@media (max-width: 1400px) {
+  .blog-post-container {
+    width: 100%;
+  }
 
-/* media queries for mobile view*/
-@media (max-width: 620px) {
+  .blog-post-heading1 {
+    padding: 16px;
+    font-size: 24px;
+  }
+
+  .blog-post-heading2 {
+    padding-left: 18px;
+    font-size: 32px;
+  }
+
+  .blog-post-context {
+    font-size: 14px;
+    padding: 16px;
+  }
+
+  /* newsletter Section2 css */
+
+  .newsletter-heading6 {
+    font-size: 18px;
+  }
+
+  .newsletter-heading1 {
+    padding-left: 0px;
+    font-size: 25px;
+    line-height: 1;
+    padding-bottom: 10px;
+  }
+
+  .newsletter-subs {
+    width: 100%;
+    height: 60%;
+    padding: 10px;
+    margin: auto;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .newsletter-policy {
+    color: #666;
+  }
+  /* article responsive css */
+  .conatiner-article-section,
+  .conatiner-article2-section {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .conatiner-article2-section {
+    grid-template-areas:
+      'article1 article2'
+      'article3 article4 article2';
+  }
+}
+
+/* media queries for Tablet view */
+@media (max-width: 1024px) {
+  /* Hero section1 css  */
+  .container-hero-blog-section {
+    grid-template-columns: repeat(2, minmax(auto, 1fr));
+    grid-template-rows: repeat(2, minmax(auto, 1fr));
+    grid-template-areas:
+      'area1 area2'
+      'area3 area2';
+  }
+
+  .blog-area1 {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-areas:
+      'sub-area2'
+      'sub-area1';
+  }
+  .blog-post-container {
+    width: 100%;
+  }
+
+  .blog-post-heading1 {
+    padding: 16px;
+    font-size: 24px;
+  }
+
+  .blog-post-heading2 {
+    padding-left: 18px;
+    font-size: 32px;
+  }
+
+  .blog-post-context {
+    font-size: 14px;
+    padding: 16px;
+  }
+
+  .btn-readmore {
+    position: absolute;
+    height: 50px;
+    width: 140px;
+    margin-top: 24px;
+    bottom: 0;
+    left: 0;
+    border-radius: 0px 15px 0px 0px;
+    border: none;
+    background-color: #f6ede1;
+  }
+
+  /* article responsive css */
+  .conatiner-article-section,
+  .conatiner-article2-section {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .conatiner-article2-section {
+    grid-template-areas:
+      'article1 article2'
+      'article3 article4';
+  }
+
+  /* footer responsive */
+  footer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* media queries for Mobile view*/
+@media (max-width: 720px) {
   #bars {
     display: block;
   }
