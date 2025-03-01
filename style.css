@@ -12,6 +12,10 @@ html {
   background-color: #f6ede1;
 }
 
+html.sr .load-hidden {
+  visibility: hidden;
+}
+
 /* HEADER CSS */
 header {
   display: flex;
